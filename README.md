@@ -66,12 +66,15 @@ NEXT_PUBLIC_TEACHER_ID=
 
 ### Setup Prisma
 
-Add MySQL Database (I used PlanetScale)
+Add MySQL Database (I used PlanetScale)(https://app.planetscale.com/)
 
 ```shell
 npx prisma generate
 npx prisma db push
+npx prisma studio
 
+### TO reset
+npx prisma migrate reset
 ```
 
 ### Start the app
@@ -80,6 +83,11 @@ npx prisma db push
 npm run dev
 ```
 
+
+### For images
+https://uploadthing.com/
+
+
 ## Available commands
 
 Running commands with npm `npm run [command]`
@@ -87,3 +95,10 @@ Running commands with npm `npm run [command]`
 | command         | description                              |
 | :-------------- | :--------------------------------------- |
 | `dev`           | Starts a development instance of the app |
+
+
+### For Stripe running in localhost
+
+```shell
+stripe listen --forward-to localhost:3000/api/webhook
+```

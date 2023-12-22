@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: ["utfs.io"],
+  },
+  resolve: {
+    extensions: [".js", ".mjs"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
